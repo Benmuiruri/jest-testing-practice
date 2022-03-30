@@ -20,10 +20,6 @@ class Calculator {
   }
 }
 
-let cal = new Calculator(1, 3).add()
-
-console.log(cal);
-
 module.exports = Calculator;
 
 
