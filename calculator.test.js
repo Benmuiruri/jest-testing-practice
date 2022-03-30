@@ -41,6 +41,8 @@ describe('Calculator Multiplication tests', () => {
   });
 });
 
+//test
+
 describe('Calculator Division tests', () => {
   const number = new Calculator(3, 2);
   test('Divide 3 / 2 to be equal 4.5', () => {
