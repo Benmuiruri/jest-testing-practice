@@ -1,8 +1,6 @@
-module.exports = {};
-
 // Task 1
 
-module.exports.stringLength = (str) => {
+const stringLength = (str) => {
   if (str.length < 1 || str.length > 10) {
     throw new Error('Please enter a string that is 1 to 10 characters long');
   }
@@ -11,34 +9,40 @@ module.exports.stringLength = (str) => {
 
 // Task 2
 
-module.exports.reverseString = (str) => {
+const reverseString = (str) => {
   const splitStr = str.split('').reverse().join('');
   return splitStr;
 };
 
 // Task 3
-module.exports.calculator = {
-  add(a, b) {
-    return a + b;
-  },
+class Calculator {
+  constructor(num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
+  }
+  add() {
+    return this.num1 + this.num2;
+  }
 
-  subtract(a, b) {
-    return a - b;
-  },
+  subtract() {
+    return this.num1 - this.num2;
+  }
 
-  multiply(a, b) {
-    return a * b;
-  },
+  multiply() {
+    return this.num1 * this.num2;
+  }
 
-  divide(a, b) {
-    return a / b;
+  divide() {
+    return this.num1 / this.num2;
   }
 }
 
 // Task 4 
-module.exports.capitalizeString = (str) => {
+const capitalizeString = (str) => {
   if (!/^[A-Za-z]/.test(str.charAt(0))) {
     throw new Error('The first chatacter must be a alphabetic letter');
   }
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+export { stringLength, reverseString, Calculator, capitalizeString };
