@@ -3,15 +3,15 @@ const tests = require('./index');
 // Test 1
 describe('String Length', () => {
   const testStr = tests.stringLength('ben');
-  test('Correctly test string length', () => {
+  test('should print string length', () => {
     expect(testStr).toBe(3);
   });
 
-  test('String length should be larger than 1', () => {
+  test('string length should be larger than 1', () => {
     expect(testStr).toBeGreaterThan(1);
   });
 
-  test('String length should be smaller than 10', () => {
+  test('string length should be smaller than 10', () => {
     expect(testStr).toBeLessThan(10);
   });
 });
@@ -21,12 +21,12 @@ describe('Test Reverse String', () => {
   const testStr = tests.reverseString('ben');
   const reverseStr = 'neb';
 
-  test('Reverses a string', () => {
+  test('should reverse a string', () => {
     expect(testStr).toBe(reverseStr);
   });
 });
 
-// Test 3 
+// Test 3
 describe('Calculator addition tests', () => {
   const number = tests.calculator.add(2, 2);
   test('Adds 2 + 2 to equal 4', () => {
@@ -79,15 +79,15 @@ describe('Calculator Division tests', () => {
   });
 });
 
-// Test 4 
+// Test 4
 describe('First character in String is a letter and is capitalized', () => {
-  test('First character is capitalized', () => {
+  test('First character should be capitalized', () => {
     const testStr = tests.capitalizeString('ben');
     const letter = testStr.charAt(0);
     expect(letter).toMatch(/[A-Z]/);
   });
 
-  test('First character is a letter', () => {
+  test('First character should be a letter', () => {
     const testStr = tests.capitalizeString('ben');
     const letter = testStr.charAt(0);
     expect(letter).toMatch(/^[A-Za-z]/);
