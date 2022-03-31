@@ -1,5 +1,3 @@
-// const { expect } = require('@jest/globals');
-const { expect } = require('@jest/globals');
 const Calculator = require('./calculator.js');
 
 describe('Calculator addition tests', () => {
