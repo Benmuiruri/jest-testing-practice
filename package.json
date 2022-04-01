@@ -255,7 +255,7 @@
     "yargs-parser": "^20.2.9"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "watch": "jest --watch *.js"
   },
   "repository": {
